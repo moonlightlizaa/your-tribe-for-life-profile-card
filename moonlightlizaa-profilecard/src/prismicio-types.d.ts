@@ -30,7 +30,7 @@ interface PageDocumentData {
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/field#slices
 	 */
-	slices: prismic.SliceZone<PageDocumentDataSlicesSlice>;
+	slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
 	/**
 	 * Meta Title field in *Page*
 	 *
@@ -39,7 +39,7 @@ interface PageDocumentData {
 	 * - **API ID Path**: page.meta_title
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
+	 */;
 	meta_title: prismic.KeyTextField;
 
 	/**
@@ -95,6 +95,26 @@ export interface RichTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	content: prismic.RichTextField;
+
+	/**
+	 * bio_text field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.bio_text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	bio_text: prismic.RichTextField;
+
+	/**
+	 * profile_picture field in *RichText → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.profile_picture
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	profile_picture: prismic.ImageField<never>;
 }
 
 /**
