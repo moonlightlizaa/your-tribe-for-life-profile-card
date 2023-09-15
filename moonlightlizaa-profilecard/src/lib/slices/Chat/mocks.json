@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"chat_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Dolore excepteur deserunt consectetur sit anim ipsum labore non. Adipisicing ullamco magna est tempor occaecat eu ullamco ad nulla incididunt adipisicing aute. Amet commodo incididunt elit sint non incididunt eiusmod quis."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

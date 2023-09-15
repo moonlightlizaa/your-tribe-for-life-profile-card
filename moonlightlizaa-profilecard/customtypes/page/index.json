@@ -27,7 +27,22 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"rich_text": {
+						"header": {
+							"type": "SharedSlice"
+						},
+						"introduction": {
+							"type": "SharedSlice"
+						},
+						"about_me": {
+							"type": "SharedSlice"
+						},
+						"social_media": {
+							"type": "SharedSlice"
+						},
+						"chat": {
+							"type": "SharedSlice"
+						},
+						"footer": {
 							"type": "SharedSlice"
 						}
 					}

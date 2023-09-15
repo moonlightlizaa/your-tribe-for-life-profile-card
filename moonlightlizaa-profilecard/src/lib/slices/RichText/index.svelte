@@ -1,4 +1,6 @@
 <script>
+	// @ts-nocheck
+
 	import { PrismicRichText } from '@prismicio/svelte';
 	import Label from './Label.svelte';
 
