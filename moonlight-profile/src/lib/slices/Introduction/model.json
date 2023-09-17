@@ -1,0 +1,45 @@
+{
+  "id": "introduction",
+  "type": "SharedSlice",
+  "name": "Introduction",
+  "description": "Introduction",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "introduction_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "introduction_title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "introduction_bio": {
+          "type": "StructuredText",
+          "config": {
+            "label": "introduction_bio",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "introduction_image": {
+          "type": "Image",
+          "config": {
+            "label": "introduction_image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
