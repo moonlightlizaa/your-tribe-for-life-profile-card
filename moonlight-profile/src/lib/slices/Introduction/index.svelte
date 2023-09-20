@@ -17,15 +17,15 @@
 	<section class="introduction-bio">
 		<PrismicRichText field={slice.primary.introduction_bio} />
 	</section>
-	<section class="introduction-image">
+	<!-- <section class="introduction-image">
 		<PrismicImage field={slice.primary.introduction_image} />
-	</section>
+	</section> -->
 </section>
 
 <style>
 	.introduction-title {
 		font-family: Poppins;
-		font-size: 6rem;
+		font-size: 4rem;
 		font-style: normal;
 		font-weight: 700;
 		line-height: normal;

@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"chat_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eu incididunt minim sint eu. Velit nostrud ex labore dolore deserunt. Elit minim ipsum officia aute duis."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -32,6 +32,9 @@
 						},
 						"introduction": {
 							"type": "SharedSlice"
+						},
+						"chat": {
+							"type": "SharedSlice"
 						}
 					}
 				}
