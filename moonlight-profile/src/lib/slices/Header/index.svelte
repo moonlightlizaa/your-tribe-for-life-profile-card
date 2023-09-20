@@ -47,7 +47,7 @@
 		gap: 10px;
 
 		border-radius: 2rem;
-		padding: 0.6rem;
+		padding: 0rem;
 	}
 
 	.header-profile-image {
