@@ -4,7 +4,7 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = RichTextSlice | IntroductionSlice;
+type PageDocumentDataSlicesSlice = RichTextSlice | IntroductionSlice | ChatSlice;
 
 /**
  * Content for Page documents
@@ -81,6 +81,48 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 >;
 
 export type AllDocumentTypes = PageDocument;
+
+/**
+ * Primary content in *Chat → Primary*
+ */
+export interface ChatSliceDefaultPrimary {
+	/**
+	 * chat_title field in *Chat → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: chat.primary.chat_title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	chat_title: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Chat Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ChatSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<ChatSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *Chat*
+ */
+type ChatSliceVariation = ChatSliceDefault;
+
+/**
+ * Chat Shared Slice
+ *
+ * - **API ID**: `chat`
+ * - **Description**: Chat
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ChatSlice = prismic.SharedSlice<'chat', ChatSliceVariation>;
 
 /**
  * Primary content in *Introduction → Primary*
@@ -220,6 +262,10 @@ declare module '@prismicio/client' {
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
 			AllDocumentTypes,
+			ChatSlice,
+			ChatSliceDefaultPrimary,
+			ChatSliceVariation,
+			ChatSliceDefault,
 			IntroductionSlice,
 			IntroductionSliceDefaultPrimary,
 			IntroductionSliceVariation,

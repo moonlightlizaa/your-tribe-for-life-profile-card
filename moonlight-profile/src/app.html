@@ -26,5 +26,35 @@
 			padding: 0.5em 1em;
 
 		}
+
+		
+	@media (min-width: 40em) {
+		main {
+			margin: 2rem;
+
+
+			display: grid;
+			grid:
+				'header header header' 1fr
+				'introduction introduction introduction' 2fr
+				'about-me social-media chat' 2fr
+				'footer footer chat' 1fr
+				/ 1fr 1fr 1fr;
+			gap: 15px;
+		}
+
+		.header {
+			grid-area: header;
+		}
+
+		.introduction {
+			grid-area: introduction;
+		}
+
+		.chat {
+			grid-area: chat;
+		}
+	}
+
 	</style>
 </html>
