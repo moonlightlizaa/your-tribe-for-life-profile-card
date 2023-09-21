@@ -1,0 +1,53 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"about_me_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum cupidatat anim cillum amet incididunt ipsum laboris cupidatat incididunt nulla nostrud dolore consequat irure nulla."
+						}
+					}
+				]
+			},
+			"about_me_intro": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consectetur nulla proident reprehenderit ex consequat reprehenderit."
+						}
+					}
+				]
+			},
+			"about_me_likes": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ad enim elit Lorem qui labore ad enim sunt aliquip ut sunt amet culpa occaecat proident. Ut proident ut velit eu voluptate deserunt. Nisi in qui reprehenderit elit dolore non ad ea tempor mollit laboris ea fugiat fugiat nisi."
+						}
+					}
+				]
+			},
+			"about_me_dislikes": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consequat irure cillum nulla non nisi. Ad irure nostrud tempor aute minim ex eu id magna officia aliqua occaecat dolor magna. Culpa veniam excepteur deserunt adipisicing sit quis culpa ad in."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

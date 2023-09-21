@@ -35,6 +35,9 @@
 						},
 						"chat": {
 							"type": "SharedSlice"
+						},
+						"about_me": {
+							"type": "SharedSlice"
 						}
 					}
 				}
