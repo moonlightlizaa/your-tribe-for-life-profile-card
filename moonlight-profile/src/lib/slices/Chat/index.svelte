@@ -21,6 +21,7 @@
 	.chat {
 		background-color: #f3f3f3;
 		border-radius: 20px;
+		padding: 2rem;
 	}
 
 	.chat-title {
