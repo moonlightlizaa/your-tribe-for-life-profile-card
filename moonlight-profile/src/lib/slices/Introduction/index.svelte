@@ -23,6 +23,74 @@
 </section>
 
 <style>
+	.introduction {
+		position: relative;
+		border-radius: 2rem;
+	}
+
+	.introduction-title {
+		position: absolute;
+		top: 2rem;
+		width: 20rem;
+		margin: 1rem;
+
+		color: #fff;
+		font-family: Poppins;
+		font-size: 3rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 4rem;
+	}
+
+	.introduction-bio {
+		position: absolute;
+		top: 12rem;
+		width: 18rem;
+		margin: 1rem;
+
+		color: #fff;
+		font-family: Poppins;
+		font-size: 1.5rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+	}
+
+	@media (min-width: 30em) {
+		.introduction {
+			position: relative;
+			border-radius: 2rem;
+		}
+
+		.introduction-title {
+			position: absolute;
+			top: 2rem;
+			width: 20rem;
+			margin: 2rem;
+
+			color: #fff;
+			font-family: Poppins;
+			font-size: 3rem;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 4rem;
+		}
+
+		.introduction-bio {
+			position: absolute;
+			top: 12rem;
+			width: 18rem;
+			margin: 2rem;
+
+			color: #fff;
+			font-family: Poppins;
+			font-size: 1.5rem;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+		}
+	}
+
 	@media (min-width: 45em) {
 		.introduction {
 			position: relative;
