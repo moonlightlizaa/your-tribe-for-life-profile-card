@@ -1,8 +1,8 @@
 {
-  "id": "introduction",
+  "id": "social_media",
   "type": "SharedSlice",
-  "name": "Introduction",
-  "description": "Introduction",
+  "name": "SocialMedia",
+  "description": "SocialMedia",
   "variations": [
     {
       "id": "default",
@@ -12,32 +12,37 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "introduction_title": {
+        "social_media_title": {
           "type": "StructuredText",
           "config": {
-            "label": "introduction_title",
+            "label": "social_media_title",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "introduction_bio": {
-          "type": "StructuredText",
+        "social_media_option1": {
+          "type": "Link",
           "config": {
-            "label": "introduction_bio",
+            "label": "social_media_option1",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "select": null
           }
         },
-        "introduction_image": {
-          "type": "Image",
+        "social_media_option2": {
+          "type": "Link",
           "config": {
-            "label": "introduction_image",
-            "constraint": {
-              "width": 1600
-            },
-            "thumbnails": []
+            "label": "social_media_option2",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "social_media_option3": {
+          "type": "Link",
+          "config": {
+            "label": "social_media_option3",
+            "placeholder": "",
+            "select": null
           }
         }
       },

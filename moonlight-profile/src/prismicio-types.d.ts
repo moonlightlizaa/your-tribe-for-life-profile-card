@@ -4,7 +4,12 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = RichTextSlice | IntroductionSlice | ChatSlice;
+type PageDocumentDataSlicesSlice =
+	| RichTextSlice
+	| IntroductionSlice
+	| ChatSlice
+	| AboutMeSlice
+	| SocialMediaSlice;
 
 /**
  * Content for Page documents
@@ -81,6 +86,78 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 >;
 
 export type AllDocumentTypes = PageDocument;
+
+/**
+ * Primary content in *AboutMe → Primary*
+ */
+export interface AboutMeSliceDefaultPrimary {
+	/**
+	 * about_me_title field in *AboutMe → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about_me.primary.about_me_title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	about_me_title: prismic.RichTextField;
+
+	/**
+	 * about_me_intro field in *AboutMe → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about_me.primary.about_me_intro
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	about_me_intro: prismic.RichTextField;
+
+	/**
+	 * about_me_likes field in *AboutMe → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about_me.primary.about_me_likes
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	about_me_likes: prismic.RichTextField;
+
+	/**
+	 * about_me_dislikes field in *AboutMe → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about_me.primary.about_me_dislikes
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	about_me_dislikes: prismic.RichTextField;
+}
+
+/**
+ * Default variation for AboutMe Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutMeSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<AboutMeSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *AboutMe*
+ */
+type AboutMeSliceVariation = AboutMeSliceDefault;
+
+/**
+ * AboutMe Shared Slice
+ *
+ * - **API ID**: `about_me`
+ * - **Description**: AboutMe
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutMeSlice = prismic.SharedSlice<'about_me', AboutMeSliceVariation>;
 
 /**
  * Primary content in *Chat → Primary*
@@ -248,6 +325,78 @@ type RichTextSliceVariation = RichTextSliceDefault;
  */
 export type RichTextSlice = prismic.SharedSlice<'rich_text', RichTextSliceVariation>;
 
+/**
+ * Primary content in *SocialMedia → Primary*
+ */
+export interface SocialMediaSliceDefaultPrimary {
+	/**
+	 * social_media_title field in *SocialMedia → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: social_media.primary.social_media_title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	social_media_title: prismic.RichTextField;
+
+	/**
+	 * social_media_option1 field in *SocialMedia → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: social_media.primary.social_media_option1
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	social_media_option1: prismic.LinkField;
+
+	/**
+	 * social_media_option2 field in *SocialMedia → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: social_media.primary.social_media_option2
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	social_media_option2: prismic.LinkField;
+
+	/**
+	 * social_media_option3 field in *SocialMedia → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: social_media.primary.social_media_option3
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	social_media_option3: prismic.LinkField;
+}
+
+/**
+ * Default variation for SocialMedia Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SocialMediaSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<SocialMediaSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *SocialMedia*
+ */
+type SocialMediaSliceVariation = SocialMediaSliceDefault;
+
+/**
+ * SocialMedia Shared Slice
+ *
+ * - **API ID**: `social_media`
+ * - **Description**: SocialMedia
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SocialMediaSlice = prismic.SharedSlice<'social_media', SocialMediaSliceVariation>;
+
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(
@@ -262,6 +411,10 @@ declare module '@prismicio/client' {
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
 			AllDocumentTypes,
+			AboutMeSlice,
+			AboutMeSliceDefaultPrimary,
+			AboutMeSliceVariation,
+			AboutMeSliceDefault,
 			ChatSlice,
 			ChatSliceDefaultPrimary,
 			ChatSliceVariation,
@@ -273,7 +426,11 @@ declare module '@prismicio/client' {
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceVariation,
-			RichTextSliceDefault
+			RichTextSliceDefault,
+			SocialMediaSlice,
+			SocialMediaSliceDefaultPrimary,
+			SocialMediaSliceVariation,
+			SocialMediaSliceDefault
 		};
 	}
 }

@@ -21,14 +21,31 @@
 	.chat {
 		background-color: #f3f3f3;
 		border-radius: 20px;
+		padding: 2rem;
 	}
 
 	.chat-title {
 		color: #272727;
 		font-family: Poppins;
-		font-size: 2rem;
+		font-size: 2.5rem;
 		font-style: normal;
 		font-weight: 600;
 		line-height: normal;
+	}
+
+	@media (min-width: 45em) {
+		.chat {
+			background-color: #f3f3f3;
+			border-radius: 20px;
+		}
+
+		.chat-title {
+			color: #272727;
+			font-family: Poppins;
+			font-size: 3rem;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+		}
 	}
 </style>
