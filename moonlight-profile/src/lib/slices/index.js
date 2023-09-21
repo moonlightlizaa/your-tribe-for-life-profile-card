@@ -4,10 +4,12 @@ import AboutMe from './AboutMe/index.svelte';
 import Chat from './Chat/index.svelte';
 import Introduction from './Introduction/index.svelte';
 import Header from './Header/index.svelte';
+import SocialMedia from './SocialMedia/index.svelte';
 
 export const components = {
 	about_me: AboutMe,
 	chat: Chat,
 	introduction: Introduction,
-	rich_text: Header
+	rich_text: Header,
+	social_media: SocialMedia
 };

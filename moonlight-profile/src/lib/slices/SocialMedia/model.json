@@ -1,0 +1,52 @@
+{
+  "id": "social_media",
+  "type": "SharedSlice",
+  "name": "SocialMedia",
+  "description": "SocialMedia",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "social_media_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "social_media_title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "social_media_option1": {
+          "type": "Link",
+          "config": {
+            "label": "social_media_option1",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "social_media_option2": {
+          "type": "Link",
+          "config": {
+            "label": "social_media_option2",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "social_media_option3": {
+          "type": "Link",
+          "config": {
+            "label": "social_media_option3",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

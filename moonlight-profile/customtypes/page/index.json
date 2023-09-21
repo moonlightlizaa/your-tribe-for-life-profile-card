@@ -38,6 +38,9 @@
 						},
 						"about_me": {
 							"type": "SharedSlice"
+						},
+						"social_media": {
+							"type": "SharedSlice"
 						}
 					}
 				}
