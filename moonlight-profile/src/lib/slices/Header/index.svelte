@@ -64,7 +64,7 @@
 			display: grid;
 			grid:
 				'picture name social' 1fr
-				/ 0.5fr 1fr 1fr;
+				/ 0.5fr 1fr 2fr;
 			gap: 10px;
 		}
 
